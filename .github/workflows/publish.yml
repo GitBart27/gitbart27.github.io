@@ -1,216 +1,37 @@
-_site/
-.quarto/
+name: Publish site
 
-project:
-  type: website
-  output-dir: _site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-website:
-  title: "Bart Slob"
-  site-url: "https://bartslob.nl"
-  description: "Health economics and market access research, with a focus on cardiometabolic disease and obesity."
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: research.qmd
-        text: Research
-      - href: publications.qmd
-        text: Publications
-    right:
-      - icon: linkedin
-        href: https://www.linkedin.com/in/VUL-IN
-        aria-label: LinkedIn
-      - icon: person-badge
-        href: https://orcid.org/VUL-IN
-        aria-label: ORCID
-      - icon: envelope
-        href: mailto:VUL-IN@bartslob.nl
-        aria-label: E-mail
-  page-footer:
-    left: "© 2026 Bart Slob"
-    right: "Built with Quarto"
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-format:
-  html:
-    theme:
-      light: [cosmo, theme-light.scss]
-      dark: [cosmo, theme-dark.scss]
-    toc: false
-    smooth-scroll: false
-    link-external-newwindow: true
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
----
-title: "Bart Slob"
-page-layout: full
-title-block-banner: false
----
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: quarto render
+      - run: echo "bartslob.nl" > _site/CNAME
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
-::: {.hero}
-I study what health care spending buys society.
-:::
-
-::: {.lead-block}
-I'm a senior researcher and strategist at [Health-Ecore](https://www.health-ecore.com), a Dutch consultancy for health economics and market access. Most of my work is on cardiometabolic disease and obesity.
-
-I look at health interventions as an investment question. What does it cost, who pays, and where do the returns land? Think productivity, labor participation and future care costs, not only the price per QALY.
-
-My work covers reimbursement dossiers, academic papers and strategic advice for payers, policymakers and industry.
-:::
-
-::: {.columns-3}
-
-::: {.col}
-### Research
-Cardiometabolic disease, obesity and the economics of prevention.  
-[More about my research](research.qmd)
-:::
-
-::: {.col}
-### Publications
-Peer-reviewed papers and reports.  
-[See all publications](publications.qmd)
-:::
-
-::: {.col}
-### Contact
-Questions or a collaboration in mind?  
-[Send me an e-mail](mailto:VUL-IN@bartslob.nl)
-:::
-
-:::
-
-% PLACEHOLDER: vervang dit bestand door een BibTeX-export uit Zotero.
-% In Zotero: selecteer je publicaties > rechtermuisklik > Export Items > BibTeX.
-
-@article{placeholder2026,
-  author  = {Slob, Bart},
-  title   = {Placeholder: replace with a Zotero export},
-  journal = {Journal name},
-  year    = {2026}
-}
-
----
-title: "Publications"
-bibliography: publications.bib
-nocite: |
-  @*
----
-
-A full overview is also on my [ORCID profile](https://orcid.org/VUL-IN).
-
-::: {#refs}
-:::
-
----
-title: "Research"
----
-
-## Cardiometabolic disease and obesity
-
-<!-- PLACEHOLDER: herschrijf in eigen woorden -->
-Heart disease, type 2 diabetes, obesity, heart failure and chronic kidney disease share risk factors and drive each other. I study the burden and costs of this cluster in the Netherlands, and how new treatments and care pathways change that picture.
-
-## Health as investment
-
-<!-- PLACEHOLDER -->
-Cost-effectiveness ratios tell part of the story. I'm interested in the rest: what better health means for work, productivity and public finances, and how to make that case to payers, ministries and employers.
-
-## PhD
-
-<!-- PLACEHOLDER: controleer status en wat je openbaar wilt maken -->
-My PhD work, with the Open Universiteit and Zuyderland Medisch Centrum, focuses on redesigning the care pathway for cardiovascular risk management.
-
-/*-- scss:defaults --*/
-$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-$headings-font-family: "Newsreader", Georgia, "Times New Roman", serif;
-$headings-font-weight: 500;
-
-$body-bg: #161B1E;
-$body-color: #E4E6E6;
-$primary: #E08A97;
-$link-color: $primary;
-$navbar-bg: $body-bg;
-$navbar-fg: $body-color;
-$footer-bg: $body-bg;
-$border-color: #2E363A;
-
-/*-- scss:rules --*/
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
-
-body { line-height: 1.6; }
-main { max-width: 46rem; margin-inline: auto; }
-.page-layout-full main { max-width: 58rem; }
-
-.hero {
-  font-family: $headings-font-family;
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-  max-width: 14ch;
-  margin: 2.5rem 0 2rem;
-}
-
-.lead-block { max-width: 38rem; font-size: 1.1rem; }
-
-.columns-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid $border-color;
-}
-.columns-3 h3 { font-size: 1.25rem; margin-top: 0; }
-
-.quarto-title-block .title { font-size: 2.4rem; }
-a:focus-visible { outline: 2px solid $primary; outline-offset: 2px; }
-
-#refs .csl-entry { margin-bottom: 1rem; }
-
-/*-- scss:defaults --*/
-$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-$headings-font-family: "Newsreader", Georgia, "Times New Roman", serif;
-$headings-font-weight: 500;
-
-$body-bg: #FBFBFA;
-$body-color: #1F2A30;
-$primary: #8A2433;      // claret: one accent, used for links
-$link-color: $primary;
-$navbar-bg: $body-bg;
-$navbar-fg: $body-color;
-$footer-bg: $body-bg;
-$border-color: #D9DCDD;
-
-/*-- scss:rules --*/
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
-
-body { line-height: 1.6; }
-main { max-width: 46rem; margin-inline: auto; }
-.page-layout-full main { max-width: 58rem; }
-
-.hero {
-  font-family: $headings-font-family;
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-  max-width: 14ch;
-  margin: 2.5rem 0 2rem;
-}
-
-.lead-block { max-width: 38rem; font-size: 1.1rem; }
-
-.columns-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid $border-color;
-}
-.columns-3 h3 { font-size: 1.25rem; margin-top: 0; }
-
-.quarto-title-block .title { font-size: 2.4rem; }
-a:focus-visible { outline: 2px solid $primary; outline-offset: 2px; }
-
-#refs .csl-entry { margin-bottom: 1rem; }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

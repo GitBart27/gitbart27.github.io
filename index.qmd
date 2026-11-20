@@ -1,39 +1,39 @@
 ---
 title: "Bart Slob"
 page-layout: full
-title-block-banner: false
+title-block-style: none
 ---
 
 ::: {.hero}
-I study what health care spending buys society.
+Hoi, ik ben Bart.
 :::
 
 ::: {.lead-block}
-I'm a senior researcher and strategist at [Health-Ecore](https://www.health-ecore.com), a Dutch consultancy for health economics and market access. Most of my work is on cardiometabolic disease and obesity.
+Ik werk bij [Health-Ecore](https://www.health-ecore.com) aan vragen over de waarde van zorg en geneesmiddelen. Daarnaast promoveer ik in de gezondheidseconomie aan het [UMCG](https://www.umcg.nl).
 
-I look at health interventions as an investment question. What does it cost, who pays, and where do the returns land? Think productivity, labor participation and future care costs, not only the price per QALY.
+Mijn werk gaat vooral over hart- en vaatziekten, diabetes en obesitas. Wat kosten deze aandoeningen? Wat leveren behandelingen op, en voor wie?
 
-My work covers reimbursement dossiers, academic papers and strategic advice for payers, policymakers and industry.
+Op deze site vind je wat meer over mijn onderzoek en een overzicht van mijn publicaties.
 :::
 
 ::: {.columns-3}
 
 ::: {.col}
-### Research
-Cardiometabolic disease, obesity and the economics of prevention.  
-[More about my research](research.qmd)
+### Onderzoek
+Waar ik aan werk.  
+[Lees meer](research.qmd)
 :::
 
 ::: {.col}
-### Publications
-Peer-reviewed papers and reports.  
-[See all publications](publications.qmd)
+### Publicaties
+Overzicht van artikelen.  
+[Bekijk de lijst](publications.qmd)
 :::
 
 ::: {.col}
 ### Contact
-Questions or a collaboration in mind?  
-[Send me an e-mail](mailto:VUL-IN@bartslob.nl)
+Bereikbaar via e-mail of LinkedIn.  
+[Stuur een mail](mailto:VUL-IN)
 :::
 
 :::

@@ -33,7 +33,7 @@ Overzicht van artikelen.
 ::: {.col}
 ### Contact
 Bereikbaar via e-mail of LinkedIn.  
-[Stuur een mail](mailto:VUL-IN)
+[Stuur een mail](mailto:bartslob@health-ecore.com)
 :::
 
 :::

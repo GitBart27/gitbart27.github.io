@@ -1,11 +1,11 @@
 ---
-title: "Publications"
+title: "Publicaties"
 bibliography: publications.bib
 nocite: |
   @*
 ---
 
-A full overview is also on my [ORCID profile](https://orcid.org/VUL-IN).
+Een volledig overzicht staat ook op mijn [ORCID-profiel](https://orcid.org/0009-0008-9125-0190).
 
 ::: {#refs}
 :::

@@ -1,0 +1,46 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Newsreader", Georgia, "Times New Roman", serif;
+$headings-font-weight: 500;
+
+$body-bg: #FBFBFA;
+$body-color: #1F2A30;
+$primary: #8A2433;      // claret: one accent, used for links
+$link-color: $primary;
+$navbar-bg: $body-bg;
+$navbar-fg: $body-color;
+$footer-bg: $body-bg;
+$border-color: #D9DCDD;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap');
+
+body { line-height: 1.6; }
+main { max-width: 46rem; margin-inline: auto; }
+.page-layout-full main { max-width: 58rem; }
+
+.hero {
+  font-family: $headings-font-family;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  max-width: 14ch;
+  margin: 2.5rem 0 2rem;
+}
+
+.lead-block { max-width: 38rem; font-size: 1.1rem; }
+
+.columns-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-color;
+}
+.columns-3 h3 { font-size: 1.25rem; margin-top: 0; }
+
+.quarto-title-block .title { font-size: 2.4rem; }
+a:focus-visible { outline: 2px solid $primary; outline-offset: 2px; }
+
+#refs .csl-entry { margin-bottom: 1rem; }

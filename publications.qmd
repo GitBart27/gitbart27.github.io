@@ -1,0 +1,11 @@
+---
+title: "Publications"
+bibliography: publications.bib
+nocite: |
+  @*
+---
+
+A full overview is also on my [ORCID profile](https://orcid.org/VUL-IN).
+
+::: {#refs}
+:::

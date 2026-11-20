@@ -1,0 +1,39 @@
+---
+title: "Bart Slob"
+page-layout: full
+title-block-banner: false
+---
+
+::: {.hero}
+I study what health care spending buys society.
+:::
+
+::: {.lead-block}
+I'm a senior researcher and strategist at [Health-Ecore](https://www.health-ecore.com), a Dutch consultancy for health economics and market access. Most of my work is on cardiometabolic disease and obesity.
+
+I look at health interventions as an investment question. What does it cost, who pays, and where do the returns land? Think productivity, labor participation and future care costs, not only the price per QALY.
+
+My work covers reimbursement dossiers, academic papers and strategic advice for payers, policymakers and industry.
+:::
+
+::: {.columns-3}
+
+::: {.col}
+### Research
+Cardiometabolic disease, obesity and the economics of prevention.  
+[More about my research](research.qmd)
+:::
+
+::: {.col}
+### Publications
+Peer-reviewed papers and reports.  
+[See all publications](publications.qmd)
+:::
+
+::: {.col}
+### Contact
+Questions or a collaboration in mind?  
+[Send me an e-mail](mailto:VUL-IN@bartslob.nl)
+:::
+
+:::

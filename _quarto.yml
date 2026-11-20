@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Bart Slob"
+  site-url: "https://bartslob.nl"
+  description: "Health economics and market access research, with a focus on cardiometabolic disease and obesity."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/VUL-IN
+        aria-label: LinkedIn
+      - icon: person-badge
+        href: https://orcid.org/VUL-IN
+        aria-label: ORCID
+      - icon: envelope
+        href: mailto:VUL-IN@bartslob.nl
+        aria-label: E-mail
+  page-footer:
+    left: "© 2026 Bart Slob"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme-light.scss]
+      dark: [cosmo, theme-dark.scss]
+    toc: false
+    smooth-scroll: false
+    link-external-newwindow: true

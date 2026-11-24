@@ -1,7 +1,6 @@
 ---
-title: "Bart Slob"
+pagetitle: "Bart Slob"
 page-layout: full
-title-block-style: none
 ---
 
 ::: {.hero}

@@ -4,7 +4,11 @@ page-layout: full
 ---
 
 ::: {.hero}
+::: {.hero-text}
 Bart Slob
+:::
+
+![](images/bart.jpg){.hero-photo fig-alt="Portretfoto van Bart Slob"}
 :::
 
 ::: {.lead-block}

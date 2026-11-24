@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - files/
 
 lang: nl
 
@@ -16,6 +18,8 @@ website:
         text: Onderzoek
       - href: publications.qmd
         text: Publicaties
+      - href: cv.qmd
+        text: CV
     right:
       - icon: linkedin
         href: https://www.linkedin.com/in/bart-slob-4102bb184/
@@ -24,7 +28,7 @@ website:
         href: https://orcid.org/0009-0008-9125-0190
         aria-label: ORCID
       - icon: envelope
-        href: mailto:bartslob@health-ecore.com
+        href: mailto:bartslob27@gmail.com
         aria-label: E-mail
   page-footer:
     left: "© 2026 Bart Slob"

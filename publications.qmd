@@ -1,11 +1,21 @@
 ---
 title: "Publicaties"
-bibliography: publications.bib
-nocite: |
-  @*
 ---
 
 Een volledig overzicht staat ook op mijn [ORCID-profiel](https://orcid.org/0009-0008-9125-0190).
 
-::: {#refs}
+## Wetenschappelijke artikelen
+
+::: {.pubs}
+Abogunrin S, **Slob BPH**, Lane M, Emamipour S, Twardowski P, Boersma C, van der Schans J. The introduction and adoption of artificial intelligence in systematic literature reviews: a discrete choice experiment. *BMJ Open*. 2025;15(10):e099921. [DOI](https://doi.org/10.1136/bmjopen-2025-099921)
+
+**Slob BPH**, Postma MJ, Weersma M, Brunner-La Rocca HP, de Jong LA, Boersma C. Cost-effectiveness of empagliflozin in patients with chronic heart failure irrespective of left-ventricle ejection fraction in the Netherlands. *American Journal of Cardiovascular Drugs*. 2025;25(5):715–726. [DOI](https://doi.org/10.1007/s40256-025-00749-6)
+
+**Slob BPH**, Fens T, Weersma M, Postma MJ, Boersma C, de Jong LA. Cost-effectiveness of empagliflozin in adult patients with chronic kidney disease in the Netherlands. *PLOS ONE*. 2024;19(12):e0315509. [DOI](https://doi.org/10.1371/journal.pone.0315509)
+:::
+
+## Rapporten
+
+::: {.pubs}
+Long Alliantie Nederland. Leidraad voor vaccinatie bij volwassenen met een chronische longziekte. Amersfoort: Long Alliantie Nederland; 2025. Bijdrage als lid van het Health-Ecore-projectteam. [PDF](https://www.longalliantie.nl/content/Rapport-Leidraad-Vaccinaties-website-LR.pdf)
 :::
